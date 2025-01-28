@@ -1,0 +1,144 @@
+{
+  "cSpell.language": "en,de",
+  "editor.formatOnPaste": true,
+  "editor.formatOnSave": false,
+  "diffEditor.experimental.showMoves": true,
+  "diffEditor.hideUnchangedRegions.contextLineCount": 5,
+  "editor.minimap.showSlider": "always",
+  "editor.fontFamily": "JetBrains Mono",
+  "editor.fontSize": 14,
+  "editor.fontLigatures": true,
+  "workbench.colorTheme": "Default Dark Modern",
+  "workbench.iconTheme": "material-icon-theme",
+  "workbench.activityBar.location": "default",
+  "workbench.tree.stickyScrollMaxItemCount": 5,
+  "window.zoomLevel": 0,
+  "commentAnchors.tags.sortMethod": "type",
+  "commentAnchors.workspace.lazyLoad": true,
+  "commentAnchors.tags.anchors": {
+    "ANCHOR": {
+      "iconColor": "default",
+      "highlightColor": "#A8C023",
+      "scope": "file"
+    },
+    "TODO": {
+      "iconColor": "blue",
+      "highlightColor": "#3ea8ff",
+      "scope": "workspace"
+    },
+    "FIXME": {
+      "iconColor": "red",
+      "highlightColor": "#F44336",
+      "scope": "workspace"
+    },
+    "STUB": {
+      "iconColor": "purple",
+      "highlightColor": "#BA68C8",
+      "scope": "file"
+    },
+    "NOTE": {
+      "iconColor": "orange",
+      "highlightColor": "#FFB300",
+      "scope": "file"
+    },
+    "REVIEW": {
+      "iconColor": "green",
+      "highlightColor": "#64DD17",
+      "scope": "workspace"
+    },
+    "SECTION": {
+      "iconColor": "blurple",
+      "highlightColor": "#896afc",
+      "scope": "workspace",
+      "behavior": "region"
+    },
+    "LINK": {
+      "iconColor": "#2ecc71",
+      "highlightColor": "#2ecc71",
+      "scope": "workspace",
+      "behavior": "link"
+    },
+    "DEBUG": {
+      "iconColor": "#9E9E9E",
+      "highlightColor": "#9E9E9E",
+      "scope": "workspace"
+    }
+  },
+  "autopep8.args": [
+    "--max-line-length=200"
+  ],
+  "python.analysis.autoImportCompletions": true,
+  "python.analysis.autoFormatStrings": true,
+  "python.analysis.inlayHints.enabled": false,
+  "python.analysis.typeCheckingMode": "standard",
+  "pylint.args": [
+    "--max-line-length=200",
+    "--disable=C0111",
+    "--disable=C0303"
+  ],
+  "python.missingPackage.severity": "Error",
+  "ruff.importStrategy": "useBundled",
+  "ruff.lineLength": 200,
+  
+  "dotnet.backgroundAnalysis.analyzerDiagnosticsScope": "fullSolution",
+  "dotnet.backgroundAnalysis.compilerDiagnosticsScope": "fullSolution",
+  "github.copilot.chat.scopeSelection": true,
+  "eslint.format.enable": true,
+  "prettier.endOfLine": "auto",
+  "prettier.printWidth": 50,
+  "prettier.quoteProps": "preserve",
+  "prettier.singleAttributePerLine": true,
+  "prettier.tabWidth": 4,
+  "prettier.useTabs": true,
+  "git.mergeEditor": true,
+  "git.pullBeforeCheckout": true,
+  
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.autopep8"
+  },
+  "[csharp]": {
+    "editor.defaultFormatter": "csharpier.csharpier-vscode"
+  },
+  "[javascript]": {
+    // "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+  },
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[markdown]":{
+    "editor.defaultFormatter": "yzhang.markdown-all-in-one"
+  },
+  
+  "liveshare.allowGuestDebugControl": true,
+  "liveshare.allowGuestTaskControl": true,
+  "liveshare.joinDebugSessionOption": "Prompt",
+  
+  "typescript.format.placeOpenBraceOnNewLineForFunctions": true,
+  "typescript.format.semicolons": "insert",
+  "typescript.inlayHints.functionLikeReturnTypes.enabled": true,
+  "typescript.inlayHints.parameterTypes.enabled": true,
+  "javascript.format.placeOpenBraceOnNewLineForControlBlocks": true,
+  "javascript.format.placeOpenBraceOnNewLineForFunctions": true,
+  "javascript.format.insertSpaceBeforeFunctionParenthesis": true,
+  "javascript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyParenthesis": true,
+  "javascript.format.semicolons": "ignore",
+  "javascript.inlayHints.enabled": false,
+  "javascript.preferences.quoteStyle": "double",
+  "js/ts.implicitProjectConfig.checkJs": true,
+  "javascript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBrackets": true,
+  "typescript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBrackets": false,
+  "javascript.format.insertSpaceAfterOpeningAndBeforeClosingEmptyBraces": false,
+  "javascript.format.insertSpaceAfterKeywordsInControlFlowStatements": true,
+  "javascript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBraces": true,
+  "javascript.format.insertSpaceAfterOpeningAndBeforeClosingJsxExpressionBraces": false,
+  "javascript.format.insertSpaceAfterOpeningAndBeforeClosingTemplateStringBraces": true,
+  "javascript.format.insertSpaceBeforeAndAfterBinaryOperators": true,
+  "javascript.validate.enable": false,
+  "commentAnchors.parseDelay": 10000,
+  "commentAnchors.tags.matchCase": false,
+  "commentAnchors.workspace.enabled": true,
+  "path-autocomplete.disableUpOneFolder": false,
+  "commentAnchors.scrollPosition": "center",
+  "commentAnchors.workspace.excludeFiles": "**/{node_modules,.git,.idea,target,out,build,bin,obj,dist,vendor,.xisf}/**/*",
+  "javascript.inlayHints.enumMemberValues.enabled": false,
+}
