@@ -7,6 +7,7 @@
 		// Spell checker
 		"streetsidesoftware.code-spell-checker",			//* Check
 		"streetsidesoftware.code-spell-checker-german",		//* Check
+		"streetsidesoftware.code-spell-checker-scientific-terms",	//* Check
 
 		// Comment highlighting
 		"ExodiusStudios.comment-anchors",		//- Pending...
@@ -93,7 +94,6 @@
 		//!"fisheva.eva-theme",
 		"PKief.material-icon-theme",			//* Check
 		"esbenp.prettier-vscode",				//* Check
-		"vscode-icons-team.vscode-icons",		//* Check
 
 		// Time tracking and stats
 		//! "WakaTime.vscode-wakatime",

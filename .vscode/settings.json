@@ -381,6 +381,14 @@
   //!$ .NETEnd ---------------------------------------------------------------------------------------------------------
 
 
+  //! PDF --------------------------------------------------------------------------------------------------------------
+  "pdf-preview.default.cursor": "hand", //default: select, options: hand, select || the default cursol tool for preview
+  "pdf-preview.default.scale": "auto", // default: auto, options: auto, fit, page-actual, page-width, page-height, 0.5, 1, 1.5, 2, 3, 4, 5 || The default zoom level for preview. Allowed values are auto, page-actual, page-fit, page-width, and 1-based scale values. (1.0 means 100%
+  "pdf-preview.default.scrollMode": "horizontal", // default: vertical, options: vertical, horizontal, wrapped || The default scroll mode for preview
+  "pdf-preview.default.sidebar": false, // default: false || Show the sidebar on load. The default visiblity of sidebar for preview.
+  "pdf-preview.default.spreadMode": "none", // default: none, options: none, odd, even || The default spread mode for preview
+  //!$ PDFEnd ----------------------------------------------------------------------------------------------------------
+
   //! Github -----------------------------------------XXXX--------------------------------------------------------------
 
   "github.copilot.advanced": {},
@@ -498,7 +506,7 @@
 
   //!$ INdentRainbowEnd ------------------------------------------------------------------------------------------------
 
-  //! cSpell -----------------------------------------------------------------------------------------------------------
+  //! cSpell ------------------------------------------XXXXX------------------------------------------------------------
   "cSpell.language": "en,de",
   "cSpell.words":[
     "csterrn",
@@ -545,6 +553,7 @@
   //   Information - Report Spelling Issues as Information (default)
   //   Hint - Report Spelling Issues as Hints, will not show up in Problems
   "cSpell.diagnosticLevel": "Hint",
+
   //!$ cSpellEnd -------------------------------------------------------------------------------------------------------
 
 
@@ -614,6 +623,7 @@
   "editor.minimap.enabled": true,
   "editor.minimap.showSlider": "always",
   "editor.fontFamily": "JetBrains Mono",      // Needed?
+  
   //!$ editorEnd -------------------------------------------------------------------------------------------------------
 
 
@@ -652,6 +662,8 @@
 
   //! Window -----------------------------------------------------------------------------------------------------------
   "window.zoomLevel": 0,
+  "window.autoDetectColorScheme": false, // default: false, Automatically detect color scheme changes and switch the theme
+  "window.closeWhenEmpty": false, // default: false, Controls whether closing the last editor should also close the window. This setting only applies for windows that do not have folders opened.
   //!$ WindowEnd -------------------------------------------------------------------------------------------------------
 
   //! file -------------------------------------------------------------------------------------------------------------
