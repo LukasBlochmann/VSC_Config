@@ -91,13 +91,16 @@
   //!$ BetterCommentsEnd -----------------------------------------------------------------------------------------------
 
 
+
+  "eslint.enable": false,
+
   //! Material-Icon-Theme ----------------------------------------------------------------------------------------------
 
   "material-icon-theme.activeIconPack":"angular", // options: angular (default), angular_ngrx, nest, none, qwik, react, react_redux, roblox, vue, vue_vuex  || Select an icon pack that enables specific icons
   "material-icon-theme.enableLogging": false, // Enable logging to the output channel (false)
-  "material-icon-theme.files.associations": {
-    "*.myext": "html"
-  }, // set custom file icon associations
+  // "material-icon-theme.files.associations": {
+  //   "*.myext": "html"
+  // }, // set custom file icon associations
   "material-icon-theme.files.color": "#90a4ae", // change the color of the file icons
   // "material-icon-theme.files.customClones": [
   //   {
@@ -117,7 +120,7 @@
   //     "source": "https://my-site.com/my-icon.svg"
   //   }
   // ], // clone any existing icon and create a new one with custom colors and associations
-  "material-icon-theme.folders.theme": "classic", // options: classic (default), none, specific || Set the type of the folder icons
+  "material-icon-theme.folders.theme": "specific", // options: classic (default), none, specific || Set the type of the folder icons
   "material-icon-theme.hidesExplorerArrows": false, // hide explorer arrows before the folder
   // "material-icon-theme.languages.associations": {
   //   "*.myext": "html"

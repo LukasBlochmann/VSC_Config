@@ -1,0 +1,14 @@
+"contributes": {
+        "languages": [
+            {
+                "id": "javascript",
+                "extensions": [".js"]
+            },
+            {
+                "id": "python",
+                "extensions": [
+                    ".py"
+                ]
+            }
+        ]
+    },

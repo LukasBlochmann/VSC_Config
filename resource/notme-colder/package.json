@@ -1,0 +1,112 @@
+{
+    "name": "notme-colder",
+    "displayName": "colder",
+    "description": "folding regions without relying on a certain language such as C or python",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.96.4"
+    },
+    "categories": [
+        "Other",
+        "Formatters"
+    ],
+    "activationEvents": [
+    "onLanguage:python",
+    "onLanguage:json",
+    "onLanguage:jsonc",
+    "onLanguage:java",
+    "onLanguage:c",
+    "onLanguage:cpp",
+    "onLanguage:csharp",
+    "onLanguage:xml",
+    "onLanguage:yaml",
+    "onLanguage:markdown",
+    "onLanguage:plaintext",
+    "onLanguage:shellscript",
+    "onLanguage:php",
+    "onLanguage:html",
+    "onLanguage:robotframework"
+    ],
+    "main": "./extension.js",
+    "contributes": {
+    "languages": [
+            {
+                "id": "javascript",
+                "extensions": [".js"]
+            },
+            {
+                "id": "python",
+                "extensions": [".py"]
+            },
+            {
+                "id": "json",
+                "extensions": [".json", ".jsonc"]
+            },
+            {
+                "id": "java",
+                "extensions": [".java"]
+            },
+            {
+                "id": "c",
+                "extensions": [".c"]
+            },
+            {
+                "id": "cpp",
+                "extensions": [".cpp", ".hpp", ".cxx", ".h"]
+            },
+            {
+                "id": "csharp",
+                "extensions": [".cs"]
+            },
+            {
+                "id": "xml",
+                "extensions": [".xml"]
+            },
+            {
+                "id": "yaml",
+                "extensions": [".yaml", ".yml"]
+            },
+            {
+                "id": "markdown",
+                "extensions": [".md"]
+            },
+            {
+                "id": "plaintext",
+                "extensions": [".txt"]
+            },
+            {
+                "id": "shellscript",
+                "extensions": [".sh", ".bash", ".zsh"]
+            },
+            {
+                "id": "php",
+                "extensions": [".php"]
+            },
+            {
+                "id": "html",
+                "extensions": [".html", ".htm"]
+            },
+            {
+                "id": "robotframework",
+                "extensions": [".robot"]
+            },
+            {
+                "id": "plaintext",
+                "extensions": [""]
+            }
+        ]
+    },
+    "scripts": {
+        "lint": "eslint .",
+        "pretest": "npm run lint",
+        "test": "vscode-test"
+    },
+    "devDependencies": {
+        "@types/vscode": "^1.96.0",
+        "@types/mocha": "^10.0.10",
+        "@types/node": "20.x",
+        "eslint": "^9.16.0",
+        "@vscode/test-cli": "^0.0.10",
+        "@vscode/test-electron": "^2.4.1"
+    }
+}
