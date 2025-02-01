@@ -99,42 +99,42 @@
     "*.myext": "html"
   }, // set custom file icon associations
   "material-icon-theme.files.color": "#90a4ae", // change the color of the file icons
-  "material-icon-theme.files.customClones": [
-    {
-      "name": "my-icon",
-      "parent": "file_type_html",
-      "source": "https://my-site.com/my-icon.svg"
-    }
-  ], // clone any existing icon and create a new one with custom colors and associations
-  "material-icon-theme.folders.associations": {
-    "myFolder": "src"
-  }, // set custom folder icon associations
-  "material-icon-theme.folders.color": "#90a4ae", // change the color of the folder icons
-  "material-icon-theme.folders.customClones": [
-    {
-      "name": "my-icon",
-      "parent": "folder_type_src",
-      "source": "https://my-site.com/my-icon.svg"
-    }
-  ], // clone any existing icon and create a new one with custom colors and associations
+  // "material-icon-theme.files.customClones": [
+  //   {
+  //     "name": "my-icon",
+  //     "parent": "file_type_html",
+  //     "source": "https://my-site.com/my-icon.svg"
+  //   }
+  // ], // clone any existing icon and create a new one with custom colors and associations
+  // "material-icon-theme.folders.associations": {
+  //   "myFolder": "src"
+  // }, // set custom folder icon associations
+  // "material-icon-theme.folders.color": "#90a4ae", // change the color of the folder icons
+  // "material-icon-theme.folders.customClones": [
+  //   {
+  //     "name": "my-icon",
+  //     "parent": "folder_type_src",
+  //     "source": "https://my-site.com/my-icon.svg"
+  //   }
+  // ], // clone any existing icon and create a new one with custom colors and associations
   "material-icon-theme.folders.theme": "classic", // options: classic (default), none, specific || Set the type of the folder icons
   "material-icon-theme.hidesExplorerArrows": false, // hide explorer arrows before the folder
-  "material-icon-theme.languages.associations": {
-    "*.myext": "html"
-  }, // set custom language icon associations
-  "material-icon-theme.languages.customClones": [
-    {
-      "name": "my-icon",
-      "parent": "file_type_html",
-      "source": "https://my-site.com/my-icon.svg"
-    }
-  ], // clone any existing icon and create a new one with custom colors and associations
+  // "material-icon-theme.languages.associations": {
+  //   "*.myext": "html"
+  // }, // set custom language icon associations
+  // "material-icon-theme.languages.customClones": [
+  //   {
+  //     "name": "my-icon",
+  //     "parent": "file_type_html",
+  //     "source": "https://my-site.com/my-icon.svg"
+  //   }
+  // ], // clone any existing icon and create a new one with custom colors and associations
   "material-icon-theme.logLevel": "info", // options: info (default), debug, error || Set the log level for output messages
   "material-icon-theme.opacity": 1, // 1 is default, change opacity for icons
-  "material-icon-theme.rootFolders.associations": {
-    "myRoot": "src"
-  }, // set custom root folder icon associations
-  "material-icon-theme.rootFolders.color": "#90a4ae", // change the color of the root folder icons
+  // "material-icon-theme.rootFolders.associations": {
+  //   "myRoot": "src"
+  // }, // set custom root folder icon associations
+  // "material-icon-theme.rootFolders.color": "#90a4ae", // change the color of the root folder icons
   "material-icon-theme.saturation": 1, // 1 is default, change saturation for icons
 
   //!$ Material-Icon-ThemeEnd ------------------------------------------------------------------------------------------
