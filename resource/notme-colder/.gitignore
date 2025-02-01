@@ -1,0 +1,11 @@
+/./util/
+/test/
+/node_modules/
+/.vscode/
+
+.vscode-test.mjs
+.vscodeignore
+CHANGELOG.md
+LICENSE
+README.md
+eslint.config.mjs
