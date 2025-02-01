@@ -93,7 +93,49 @@
 
   //! Material-Icon-Theme ----------------------------------------------------------------------------------------------
 
-  "material-icon-theme.activeIconPack": ,
+  "material-icon-theme.activeIconPack":"angular", // options: angular (default), angular_ngrx, nest, none, qwik, react, react_redux, roblox, vue, vue_vuex  || Select an icon pack that enables specific icons
+  "material-icon-theme.enableLogging": false, // Enable logging to the output channel (false)
+  "material-icon-theme.files.associations": {
+    "*.myext": "html"
+  }, // set custom file icon associations
+  "material-icon-theme.files.color": "#90a4ae", // change the color of the file icons
+  "material-icon-theme.files.customClones": [
+    {
+      "name": "my-icon",
+      "parent": "file_type_html",
+      "source": "https://my-site.com/my-icon.svg"
+    }
+  ], // clone any existing icon and create a new one with custom colors and associations
+  "material-icon-theme.folders.associations": {
+    "myFolder": "src"
+  }, // set custom folder icon associations
+  "material-icon-theme.folders.color": "#90a4ae", // change the color of the folder icons
+  "material-icon-theme.folders.customClones": [
+    {
+      "name": "my-icon",
+      "parent": "folder_type_src",
+      "source": "https://my-site.com/my-icon.svg"
+    }
+  ], // clone any existing icon and create a new one with custom colors and associations
+  "material-icon-theme.folders.theme": "classic", // options: classic (default), none, specific || Set the type of the folder icons
+  "material-icon-theme.hidesExplorerArrows": false, // hide explorer arrows before the folder
+  "material-icon-theme.languages.associations": {
+    "*.myext": "html"
+  }, // set custom language icon associations
+  "material-icon-theme.languages.customClones": [
+    {
+      "name": "my-icon",
+      "parent": "file_type_html",
+      "source": "https://my-site.com/my-icon.svg"
+    }
+  ], // clone any existing icon and create a new one with custom colors and associations
+  "material-icon-theme.logLevel": "info", // options: info (default), debug, error || Set the log level for output messages
+  "material-icon-theme.opacity": 1, // 1 is default, change opacity for icons
+  "material-icon-theme.rootFolders.associations": {
+    "myRoot": "src"
+  }, // set custom root folder icon associations
+  "material-icon-theme.rootFolders.color": "#90a4ae", // change the color of the root folder icons
+  "material-icon-theme.saturation": 1, // 1 is default, change saturation for icons
 
   //!$ Material-Icon-ThemeEnd ------------------------------------------------------------------------------------------
 
@@ -199,6 +241,22 @@
   "commentAnchors.epic.seqStep": 1, // config how much should auto-completion-item add on current max-seq
   //!$ CommentAnchorEnd ------------------------------------------------------------------------------------------------
 
+
+  //! PathIntellisence -------------------------------------------------------------------------------------------------
+
+  "path-intellisense.absolutePathTo": "workspace", // default : "", 	If defined, unmapped absolute path imports are based on this location. Takes priority over 'absolutePathToWorkspace' if both are defined
+  "path-intellisense.absolutePathToWorkspace": true, //default: true, Sets an absolute path to the current workspace
+  "path-intellisense.autoSlashAfterDirectory": false, // default: false, Automatically adds a slash after directories
+  "path-intellisense.autoTriggerNextSuggestion": false, // default: false, Automatically triggers the next suggestion after previous suggestion
+  "path-intellisense.extensionOnImport": false, // default: false, adds the file extension to a importt statements
+  "path-intellisense.ignoreTsConfigBaseUrl": false, // default: false, Ignores tsconfig file for mappings
+  "path-intellisense.mappings": {
+    "@": "${workspaceRoot}/src"
+  }, // default: {}, 	Mappings for paths. The values should be interpreted as absolute paths (and can use '${workspaceFolder}')
+  "path-intellisense.showHiddenFiles": false, // default: false, Show hidden files
+  "path-intellisense.showOnAbsoluteSlash": true, // default: true, Shows suggestions when the import starts with a forward slash ('/')
+
+  //!$ PathIntellisenceEnd ---------------------------------------------------------------------------------------------
 
   //! AutoPep8 ---------------------------------------------------------------------------------------------------------
   "autopep8.args": [
@@ -333,7 +391,9 @@
     "plaintext": false,
     "markdown": false,
     "scminput": false,
-    "cpp": false
+    "typescript": false,
+    "cpp": false,
+    "json": false,
   },  // Enable or disable Copilot completions for specified languages
   
 
@@ -348,12 +408,42 @@
   //!$ GitEnd ----------------------------------------------------------------------------------------------------------
 
   //! Prettier ---------------------------------------------------------------------------------------------------------
-  "prettier.endOfLine": "auto",
-  "prettier.printWidth": 50,
-  "prettier.quoteProps": "preserve",
-  "prettier.singleAttributePerLine": true,
-  "prettier.tabWidth": 4,
-  "prettier.useTabs": true,
+  "prettier.endOfLine":"auto", // default: "lf", options: "lf", "crlf", "auto", "cr" || specifiy the end of line used by prettier
+  "prettier.printWidth": 80,  // default: 80, Fit code within this line limit
+  "prettier.quoteProps": "preserve",  // default: "as-needed", options: as-needed, consistent, preserve || Change when properties in objects are quoted
+  "prettier.singleAttributePerLine": true,  // default: false || Enforces single attribute per line in HTML, JSX, Vue and Angular
+  "prettier.tabWidth": 4, // default: 2, Number of spaces it should use per tab
+  "prettier.useTabs": true, //default : false, Indent lines with tabs.
+  "prettier.arrowParens": "always", // default: always, options: always, avoid || Include parentheses around a sole arrow function parameter.
+  "prettier.bracketSameLine": false, // default: false, Puts the > of a multi-line HTML (HTML, JSX, Vue, Angular) element at the end of the last line instead of being alone on the next line (does not apply to self closing elements)
+  "prettier.bracketSpacing": true, // default: true, Print spaces between brackets in object literals.
+  "prettier.configPath": "", // default: "", Path to a Prettier configuration file
+  "prettier.documentSelectors": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact",
+    "json",
+  ], // default: [], list of glob patterns to register prettier formatter
+  "prettier.embeddedLanguageFormatting": "auto", // default: auto, options: auto, off, on || Controls whether Prettier formats quoted code embedded in the file.
+  "prettier.enable": true, // default: true, Enable/disable prettier, reload required
+  "prettier.enableDebugLogs": false, // default: false, Enable/disable debug logs for troubleshooting
+  "prettier.experimentalTernaries": false, // default: false, Try prettier's new ternary formatting before it becomes the default behavior.
+  "prettier.htmlWhitespaceSensitivity": "css", // default: "css", options: "css", "strict", "ignore" || Specify the global whitespace sensitivity for HTML files.
+  "prettier.ignorePath": ".prettierignore", // default: ".prettierignore", Path to a file containing patterns of files to ignore.
+  "prettier.insertPragma": false, // Prettier can insert a special @format marker at the top of files specifying that the file has been formatted with prettier. This works well when used in tandem with the --require-pragma option. If there is already a docblock at the top of the file then this option will add a newline to it with the @format marker
+  "prettier.jsxSingleQuote": false, // default: false, Use single quotes instead of double quotes in JSX.
+  "prettier.prettierPath": "", // default: "", Path to the prettier module, eg: ./node_modules/prettier
+  "prettier.proseWrap": "always", // default: "preserve", options: "always", "never", "preserve" || (Markdown) wrap prose over multiple lines
+  "prettier.requireConfig": false, // default: false, 	Require a prettier configuration file to format. See documentation for valid configuration files, Note, untitled files will still be formatted using the VS Code prettier settings even when this setting is set.
+  "prettier.requirePragma": false, // default: false, Prettier can restrict itself to only format files that contain a special comment, called a pragma, at the top of the file. This is very useful when gradually transitioning large, unformatted codebases to prettier
+  "prettier.resolveGlobalModules": false, // default: false, When enabled, this extension will attempt to use global npm or yarn modules if local modules cannot be resolved. This setting can have a negative performance impact, particularly on Windows when you have attached network drives. Only enable this if you must use global modules.
+  "prettier.semi": true, // default: true, Whether to add a semicolon at the end of every line.
+  "prettier.singleQuote": false, // default: false, Use single quotes instead of double quotes.
+  "prettier.trailingComma": "es5", // default: "es5", options: "none", "es5", "all" || Controls the printing of trailing commas wherever possible. Valid options
+  "prettier.useEditorConfig": true, // default: true || Whether or not to take .editorconfig into account when parsing configuration. See the prettier.resolveConfig docs for details
+  "prettier.vueIndentScriptAndStyle": false, // default: false, Whether or not to indent the code inside <script> and <style> tags in Vue SFC files.
+  "prettier.withNodeModules": false, // default: false || This extension will process files in node_modules
   //!$ PrettierEnd -----------------------------------------------------------------------------------------------------
 
   //! Python -----------------------------------------------------------------------------------------------------------
@@ -369,6 +459,14 @@
   "python.missingPackage.severity": "Error",
   //!$ PythonEnd -------------------------------------------------------------------------------------------------------
 
+
+  //! PythonIndendation ------------------------------------------------------------------------------------------------
+
+  "pythonIndent.keepHangingBracketOnLine": false, // default: false || When creating a hanging indent, do not put the closing bracket on its own line
+  "pythonIndent.trimLinesWithOnlyWhitespace": false, // default: false || trims lines that contain only whitespace after pressing Enter on them
+  "pythonIndent.useTabOnHangingIndent": false, // default: false || After creating a hanging indent, press tab to leave the indented section and go to the ending bracket
+
+  //!$ PythonIndendationEnd --------------------------------------------------------------------------------------------
 
   //! IndentRainbow ----------------------------------------------------------------------------------------------------
 
