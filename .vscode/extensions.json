@@ -5,65 +5,131 @@
 	// List of extensions which should be recommended for users of this workspace.
 	"recommendations": [
 		// Spell checker
-		"streetsidesoftware.code-spell-checker",
-		"streetsidesoftware.code-spell-checker-german",
+		"streetsidesoftware.code-spell-checker",			//* Check
+		"streetsidesoftware.code-spell-checker-german",		//* Check
 
 		// Comment highlighting
-		"ExodiusStudios.comment-anchors",
+		"ExodiusStudios.comment-anchors",		//- Pending...
+		"aaron-bond.better-comments",			//* Check
+		"gruntfuggly.todo-tree",				//* Check
+		"njpwerner.autodocstring",				//* Check
 
-		// Python linting and formatting
-		"ms-python.vscode-pylance",
-		"ms-python.pylint",
-		"ms-python.python",
-		"ms-python.debugpy",
-		"charliermarsh.ruff",
-		"ms-python.autopep8",
+		// Python
+		"ms-python.vscode-pylance",				//* Check
+		"ms-python.pylint",						//- Pending...
+		"ms-python.python",						//* Check
+		"ms-python.debugpy",					//* Check
+		"charliermarsh.ruff",					//- Pending...
+		"ms-python.autopep8",					//- Pending...
+
+			//Python Jupyter
+			"ms-toolsai.jupyter",						//* Check
+			"ms-toolsai.vscode-jupyter-cell-tags",		//* Check
+			"ms-toolsai.jupyter-keymap",				//* Check
+			"ms-toolsai.jupyter-renderers",				//* Check
+			"ms-toolsai.vscode-jupyter-slideshow",		//* Check
 
 		// JavaScript
-		"dbaeumer.vscode-eslint",
-		"esbenp.prettier-vscode",
-		
+		"dbaeumer.vscode-eslint",				//- Pending...
+		"esbenp.prettier-vscode",				//- Pending...
+
+		// Java
+		"pleiades.java-extension-pack-jdk",		//* Check
+
+
+		// C/C++
+		"ms-vscode.cpptools-extension-pack",	//* Check
+		"ms-vscode.makefile-tools",				//* Check
+
 		// HTML
-		"ms-vscode.live-server",
-		
+		"ms-vscode.live-server",				//- Pending
+
+		// XML
+		"redhat.vscode-xml",					//* Check
+
 		// Markdown
-		"yzhang.markdown-all-in-one",
+		"yzhang.markdown-all-in-one",			//* Check
+		"davidanson.vscode-markdownlint",		//* Check
 
 		// C#
-		"ms-dotnettools.csharp",
-		"ms-dotnettools.csdevkit",
-		"csharpier.csharpier-vscode",
+		"ms-dotnettools.csharp",				//- Pending...
+		"ms-dotnettools.csdevkit",				//- Pending...
+		"csharpier.csharpier-vscode",			//- Pending...
+
+		// YAML
+		"redhat.vscode-yaml",					//* Check
+
+		// HEX
+		"ms-vscode.hexeditor",					//* Check
+
+		// Robot Framework
+		"robocorp.robotframework-lsp",			//* Check
 
 		// CSV
-		"mechatroner.rainbow-csv",
+		"mechatroner.rainbow-csv",				//* Check
+
+		// Docker
+		"ms-azuretools.vscode-docker",			//* Check
+
+		// Execution
+		"formulahendry.code-runner",			//* Pending
 
 		// Indentation
-		"LAK132.indent-to-bracket",
-		"KevinRose.vsc-python-indent",
+		"LAK132.indent-to-bracket",				//- Pending...
+		"KevinRose.vsc-python-indent",			//* Check
+		"oderwat.indent-rainbow",				//* Check
+		"shardulm94.trailing-spaces",			//* Check
 
 		// Git
-		"eamodio.gitlens",
-		
+		"eamodio.gitlens",						//* Check
+
 		// AI Tools
-		"GitHub.copilot",
-		"GitHub.copilot-chat",
+		"GitHub.copilot",						//* Check
+		"GitHub.copilot-chat",					//* Check
+		"github.vscode-pull-request-github",	//* Check
+		"visualstudioexptteam.intellicode-api-usage-examples",		//- Pending...
 
 		// Theme
-		"fisheva.eva-theme",
-		"PKief.material-icon-theme",
-		
-		// Time tracking and stats
-		"WakaTime.vscode-wakatime", 
-		
-		// Collaboration
-		"ms-vsliveshare.vsliveshare",
-		
-		// Path autocompletion
-		"ionutvmi.path-autocomplete"
+		//!"fisheva.eva-theme",
+		"PKief.material-icon-theme",			//* Check
+		"esbenp.prettier-vscode",				//* Check
+		"vscode-icons-team.vscode-icons",		//* Check
 
+		// Time tracking and stats
+		//! "WakaTime.vscode-wakatime",
+
+		// Collaboration
+		"ms-vsliveshare.vsliveshare",			//- Pending
+		"ms-vscode-remote.remote-wsl",			//* Check
+
+		// Web
+		"ritwickdey.liveserver",				//* Check
+		"peakchen90.open-html-in-browser",		//* Check
+
+		// SSH
+		"ms-vscode-remote.remote-ssh",						//* Check
+		"ms-vscode-remote.remote-ssh-edit",					//* Check
+		"ms-vscode.remote-server",							//* Check
+		"ms-vscode-remote.vscode-remote-extensionpack",		//* Check
+		"ms-vscode.remote-explorer",						//* Check
+
+		// Serial Monitor
+		"ms-vscode.vscode-serial-monitor",					//* Check
+
+		// Path autocompletion
+		"ionutvmi.path-autocomplete",			//- Pending
+		"christian-kohler.path-intellisense",	//* Check
+
+		// Else
+		"ryu1kn.partial-diff",					//* Check
+		"vscodevim.vim",						//* Check
+		"tomoki1207.pdf",						//* Check
 	],
+
+
+
 	// List of extensions recommended by VS Code that should not be recommended for users of this workspace.
 	"unwantedRecommendations": [
-		
+
 	]
 }

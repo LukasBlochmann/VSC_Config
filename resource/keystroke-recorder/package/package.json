@@ -1,0 +1,23 @@
+{
+    "name": "keystroke-recorder",
+    "displayName": "Keystroke Recorder",
+    "description": "Records keystrokes and copies them to clipboard",
+    "version": "1.0.0",
+    "publisher": "your-name",
+    "engines": { "vscode": "^1.70.0" },
+    "categories": ["Other"],
+    "activationEvents": ["onCommand:keystrokeRecorder.toggle"],
+    "main": "./out/extension.js",
+    "contributes": {
+        "commands": [
+            {
+                "command": "keystrokeRecorder.toggle",
+                "title": "Toggle Keystroke Recorder"
+            }
+        ]
+    },
+    "devDependencies": {
+        "typescript": "^4.8.3",
+        "vscode": "^1.70.0"
+    }
+}

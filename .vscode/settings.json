@@ -1,21 +1,129 @@
 {
-  "cSpell.language": "en,de",
-  "editor.formatOnPaste": true,
-  "editor.formatOnSave": false,
-  "diffEditor.experimental.showMoves": true,
-  "diffEditor.hideUnchangedRegions.contextLineCount": 5,
-  "editor.minimap.showSlider": "always",
-  "editor.fontFamily": "JetBrains Mono",
-  "editor.fontSize": 14,
-  "editor.fontLigatures": true,
-  "workbench.colorTheme": "Default Dark Modern",
-  "workbench.iconTheme": "material-icon-theme",
-  "workbench.activityBar.location": "default",
-  "workbench.tree.stickyScrollMaxItemCount": 5,
-  "window.zoomLevel": 0,
-  "commentAnchors.tags.sortMethod": "type",
-  "commentAnchors.workspace.lazyLoad": true,
+
+  //====================================================================================================================
+  //- ********************************** EXTENSIONS SETTINGS SECTION ***************************************************
+  //====================================================================================================================
+
+  //! BetterComments ---------------------------------------------------------------------------------------------------
+  "better-comments.tags": [
+    {
+      "tag": "!",
+      "color": "#FF2D00",
+      "strikethrough": false,
+      "underline": false,
+      "backgroundColor": "transparent",
+      "bold": false,
+      "italic": false
+    },
+    {
+      "tag": "?",
+      "color": "#3498DB",
+      "strikethrough": false,
+      "underline": false,
+      "backgroundColor": "transparent",
+      "bold": false,
+      "italic": false
+    },
+    {
+      "tag": "-",
+      "color": "#97ffff",
+      "strikethrough": false,
+      "underline": false,
+      "backgroundColor": "transparent",
+      "bold": false,
+      "italic": false
+    },
+    {
+      "tag": "=",
+      "color": "#00ff00",
+      "strikethrough": false,
+      "underline": false,
+      "backgroundColor": "transparent",
+      "bold": false,
+      "italic": false
+    },
+    {
+      "tag": "$",
+      "color": "#f0f8ff",
+      "strikethrough": false,
+      "underline": false,
+      "backgroundColor": "transparent",
+      "bold": false,
+      "italic": false
+    },
+    {
+      "tag": "//",
+      "color": "#474747",
+      "strikethrough": true,
+      "underline": false,
+      "backgroundColor": "transparent",
+      "bold": false,
+      "italic": false
+    },
+    {
+      "tag": "todo",
+      "color": "#FF8C00",
+      "strikethrough": false,
+      "underline": false,
+      "backgroundColor": "transparent",
+      "bold": false,
+      "italic": false
+    },
+    {
+      "tag": "*",
+      "color": "#98C379",
+      "strikethrough": false,
+      "underline": false,
+      "backgroundColor": "transparent",
+      "bold": false,
+      "italic": false
+    },
+    {
+      "tag": "(",
+      "color": "#272F7A",
+      "strikethrough": false,
+      "underline": false,
+      "backgroundColor": "transparent",
+      "bold": false,
+      "italic": false
+    }
+  ],
+  //!$ BetterCommentsEnd -----------------------------------------------------------------------------------------------
+
+
+  //! Material-Icon-Theme ----------------------------------------------------------------------------------------------
+
+  "material-icon-theme.activeIconPack": ,
+
+  //!$ Material-Icon-ThemeEnd ------------------------------------------------------------------------------------------
+
+  //! CommentAnchor ----------------------------------------------------------------------------------------------------
+  /* Usage:
+    "ANCHOR_NAME" Description of the displayed problem/info
+    "ANCHOR_NAME"[epic="category"] Description of the displayed problem/info
+
+    LINK some/file.txt:50     -- :50 is optional and says which line number to scroll to
+    
+    ANCHOR[id=my-anchor] some anchor in some/file.txt
+    LINK some/file.txt#my-anchor        links to the anchor in the file
+
+
+    LINK #error-handling        link an anchor within the current file
+  */
+
+  "commentAnchors.tags.sortMethod": "type",   // set method used to sort anchors by  in the sidebar list:: line for sorting by line number, type for sorting by type
+  "commentAnchors.workspace.lazyLoad": true,      // delay loading of workspace anchors until manual confirmation is given. enable for large workspaces
   "commentAnchors.tags.anchors": {
+    "EXAMPLE": {
+      "tag": "EXAMPLE",
+      "iconColor": "orange",
+      "highlightColor": "#32e0ec",
+      "scope": "workspace",
+      "backgroundColor": "rgba(49, 184, 79, 0.2",
+      "styleComment": true,
+      "borderStyle": "1px solid #23b2ea",
+      "borderRadius": 6,
+    },
     "ANCHOR": {
       "iconColor": "default",
       "highlightColor": "#A8C023",
@@ -64,35 +172,93 @@
       "scope": "workspace"
     }
   },
+  "commentAnchors.parseDelay": 10000,
+  "commentAnchors.tags.matchCase": false,
+  "commentAnchors.workspace.enabled": true,   // scan the whole workspace
+  "commentAnchors.scrollPosition": "top",
+  "commentAnchors.workspace.excludeFiles": "**/{node_modules,.git,.idea,target,out,build,bin,obj,dist,vendor,.xisf}/**/*",      // which files are excluded from being scanned by comment anchors
+  "commentAnchors.showCursor": false, // Enable the commentAnchors.showCursor setting to display a file view entry for your current cursor position, making it even easier to see where you are in your current file relative to your anchors.,
+  "commentAnchors.tagHighlights.enabled": true,
+  "commentAnchors.workspace.maxFiles": 50,  // how many workspace files will be indexed and displayed in the workspace anchor list
+  "commentAnchors.workspace.matchFiles": "**/*", // which files are scanned by comment anchors, good when workspace is large and not all files need to be scanned
+  "commentAnchors.workspace.pathFormat": "full",  // the way paths are displayed in the workspace anchor tree (options: full for full path, abbreviated for folders to single character, hidden for completely)
+  "commentAnchors.tags.provideAutoCompletion": true, // enable autocompletion for anchor tags
+  "commentAnchors.tags.displayInSidebar": true,  // if tags are included in sidebar or not
+  "commentAnchors.tags.displayInGutter": true,  // whether gutter icons are shown
+  "commentAnchors.tags.displayInRuler": true, // set whether icons are represented by colored bars in the scrollbar ruler
+  "commentAnchors.tags.displayLineNumber": true, // whether line numbers are displayex in the sidebar
+  "commentAnchors.tags.displayTagName": true, // wheter tag names are displayed in the sidebar
+  "commentAnchors.tags.rulerStyle": "center", // set the appearance in the overview ruler
+  "commentAnchors.tags.expandSections": false, // wheter sections are automatically expanded in the anchor tree
+  "commentAnchors.tags.separators": [
+      " ",
+      ": ",
+      " - "
+  ], // List of accepted separators
+  "commentAnchors.epic.provideAutoCompletion": true, // enable autocompletion support for epic
+  "commentAnchors.epic.seqStep": 1, // config how much should auto-completion-item add on current max-seq
+  //!$ CommentAnchorEnd ------------------------------------------------------------------------------------------------
+
+
+  //! AutoPep8 ---------------------------------------------------------------------------------------------------------
   "autopep8.args": [
     "--max-line-length=200"
   ],
-  "python.analysis.autoImportCompletions": true,
-  "python.analysis.autoFormatStrings": true,
-  "python.analysis.inlayHints.enabled": false,
-  "python.analysis.typeCheckingMode": "standard",
-  "pylint.args": [
-    "--max-line-length=200",
-    "--disable=C0111",
-    "--disable=C0303"
-  ],
-  "python.missingPackage.severity": "Error",
-  "ruff.importStrategy": "useBundled",
-  "ruff.lineLength": 200,
+  //!$ AutoPep8End -----------------------------------------------------------------------------------------------------
+
+  //! CodeRunner -------------------------------------------------------------------------------------------------------
+  "code-runner.executorMap": {
+        "javascript": "node",
+        "php": "C:\\php\\php.exe",
+        "python": "python",
+        "perl": "perl",
+        "ruby": "C:\\Ruby23-x64\\bin\\ruby.exe",
+        "go": "go run",
+        "html": "\"C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe\"",
+        "java": "cd $dir && javac $fileName && java $fileNameWithoutExt",
+        "c": "cd $dir && gcc $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt"
+    },
+    "code-runner.executorMapByGlob": {
+        "pom.xml": "cd $dir && mvn clean package",
+        "*.test.js": "tap",
+        "*.js": "node"
+    },
+    "code-runner.defaultLanguage": "javascript",
+    "code-runner.customCommand": "echo Hello",
+    "code-runner.cwd": "path/to/working/directory",
+    "code-runner.clearPreviousOutput": false,
+    "code-runner.saveAllFilesBeforeRun": false,
+    "code-runner.showExecutionMessage": true,
+    "code-runner.runInTerminal": false,
+    "code-runner.preserveFocus": false,       //! test
+    "code-runner.ignoreSelection": false,
+    "code-runner.showRunIconInEditorTitleMenu": false,
+    "code-runner.showRunCommandInEditorContextMenu": false,   //! test
+    "code-runner.showRunCommandInExplorerContextMenu": false,   //!textToSpeechInProgress
+    "code-runner.showStopIconInEditorTitleMenu": false,         //! test
+    "code-runner.terminalRoot": "ROOT>",       // default is ""
+    "code-runner.temporaryFileName": "NONE",    // default is "tempCodeRunnerFile"
+    "code-runner.respectShebang": false,      // default is True
+    "code-runner.enableAppInsights": false,
+  //!$ CodeRunnerEnd ---------------------------------------------------------------------------------------------------
+
+
+  //! TypeScript -------------------------------------------------------------------------------------------------------
+  "typescript.format.placeOpenBraceOnNewLineForFunctions": true,
+  "typescript.format.semicolons": "insert",
+  "typescript.inlayHints.functionLikeReturnTypes.enabled": true,
+  "typescript.inlayHints.parameterTypes.enabled": true,
+  //!$ TypeScriptEnd ---------------------------------------------------------------------------------------------------
+
+  //! AutoDocstring ----------------------------------------------------------------------------------------------------
+  "autoDocstring.docstringFormat": "numpy",
+  "autoDocstring.customTemplatePath": "",           // Path to a custom template for docstrings
+  "autoDocstring.generateDocstringOnEnter": true,
+  "autoDocstring.guessTypes": true,
+  "autoDocstring.quoteStyle":"'''",
+  //!$ AutoDocsttringEnd -----------------------------------------------------------------------------------------------
   
-  "dotnet.backgroundAnalysis.analyzerDiagnosticsScope": "fullSolution",
-  "dotnet.backgroundAnalysis.compilerDiagnosticsScope": "fullSolution",
-  "github.copilot.chat.scopeSelection": true,
-  "eslint.format.enable": true,
-  "prettier.endOfLine": "auto",
-  "prettier.printWidth": 50,
-  "prettier.quoteProps": "preserve",
-  "prettier.singleAttributePerLine": true,
-  "prettier.tabWidth": 4,
-  "prettier.useTabs": true,
-  "git.mergeEditor": true,
-  "git.pullBeforeCheckout": true,
-  
+  //! Formatting -------------------------------------------------------------------------------------------------------
   "[python]": {
     "editor.defaultFormatter": "ms-python.autopep8"
   },
@@ -100,7 +266,7 @@
     "editor.defaultFormatter": "csharpier.csharpier-vscode"
   },
   "[javascript]": {
-    // "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
   },
   "[html]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -108,15 +274,9 @@
   "[markdown]":{
     "editor.defaultFormatter": "yzhang.markdown-all-in-one"
   },
-  
-  "liveshare.allowGuestDebugControl": true,
-  "liveshare.allowGuestTaskControl": true,
-  "liveshare.joinDebugSessionOption": "Prompt",
-  
-  "typescript.format.placeOpenBraceOnNewLineForFunctions": true,
-  "typescript.format.semicolons": "insert",
-  "typescript.inlayHints.functionLikeReturnTypes.enabled": true,
-  "typescript.inlayHints.parameterTypes.enabled": true,
+  //!$ FormattingEnd ---------------------------------------------------------------------------------------------------
+
+  //! JavaScript -------------------------------------------------------------------------------------------------------
   "javascript.format.placeOpenBraceOnNewLineForControlBlocks": true,
   "javascript.format.placeOpenBraceOnNewLineForFunctions": true,
   "javascript.format.insertSpaceBeforeFunctionParenthesis": true,
@@ -134,11 +294,451 @@
   "javascript.format.insertSpaceAfterOpeningAndBeforeClosingTemplateStringBraces": true,
   "javascript.format.insertSpaceBeforeAndAfterBinaryOperators": true,
   "javascript.validate.enable": false,
-  "commentAnchors.parseDelay": 10000,
-  "commentAnchors.tags.matchCase": false,
-  "commentAnchors.workspace.enabled": true,
-  "path-autocomplete.disableUpOneFolder": false,
-  "commentAnchors.scrollPosition": "center",
-  "commentAnchors.workspace.excludeFiles": "**/{node_modules,.git,.idea,target,out,build,bin,obj,dist,vendor,.xisf}/**/*",
   "javascript.inlayHints.enumMemberValues.enabled": false,
+  //!$ JavaScript ------------------------------------------------------------------------------------------------------
+
+  //! PathAutoComplete -------------------------------------------------------------------------------------------------
+  "path-autocomplete.disableUpOneFolder": false,
+  //!$ PathAutoCompleteEnd ---------------------------------------------------------------------------------------------
+
+  //! LiveShare --------------------------------------------------------------------------------------------------------
+  "liveshare.allowGuestDebugControl": true,
+  "liveshare.allowGuestTaskControl": true,
+  "liveshare.joinDebugSessionOption": "Prompt",
+  //!$ LiveShareEnd ----------------------------------------------------------------------------------------------------
+
+
+  //! eslint -----------------------------------------------------------------------------------------------------------
+  "eslint.format.enable": true,
+  //!$ eslint ----------------------------------------------------------------------------------------------------------
+
+  //! ruff -------------------------------------------------------------------------------------------------------------
+  "ruff.importStrategy": "useBundled",
+  "ruff.lineLength": 200,
+  //!$ eslintEnd -------------------------------------------------------------------------------------------------------
+
+  //! .NET -------------------------------------------------------------------------------------------------------------
+  "dotnet.backgroundAnalysis.analyzerDiagnosticsScope": "fullSolution",
+  "dotnet.backgroundAnalysis.compilerDiagnosticsScope": "fullSolution",
+  //!$ .NETEnd ---------------------------------------------------------------------------------------------------------
+
+
+  //! Github -----------------------------------------XXXX--------------------------------------------------------------
+
+  "github.copilot.advanced": {},
+  "github.copilot.chat.scopeSelection": true,
+  "github.copilot.editor.enableAutoCompletions": true, // automatically show inline completions
+  "github.copilot.enable": {
+    "*": true,
+    "plaintext": false,
+    "markdown": false,
+    "scminput": false,
+    "cpp": false
+  },  // Enable or disable Copilot completions for specified languages
+  
+
+
+  //!$ GithubEnd ----------------------------------------------------------------------------------------------------------
+  
+  //! Git --------------------------------------------XXXX--------------------------------------------------------------
+  "git.mergeEditor": true,
+  "git.pullBeforeCheckout": true,
+
+
+  //!$ GitEnd ----------------------------------------------------------------------------------------------------------
+
+  //! Prettier ---------------------------------------------------------------------------------------------------------
+  "prettier.endOfLine": "auto",
+  "prettier.printWidth": 50,
+  "prettier.quoteProps": "preserve",
+  "prettier.singleAttributePerLine": true,
+  "prettier.tabWidth": 4,
+  "prettier.useTabs": true,
+  //!$ PrettierEnd -----------------------------------------------------------------------------------------------------
+
+  //! Python -----------------------------------------------------------------------------------------------------------
+  "python.analysis.autoImportCompletions": true,
+  "python.analysis.autoFormatStrings": true,
+  "python.analysis.inlayHints.enabled": false,
+  "python.analysis.typeCheckingMode": "standard",
+  "pylint.args": [
+    "--max-line-length=200",
+    "--disable=C0111",
+    "--disable=C0303"
+  ],
+  "python.missingPackage.severity": "Error",
+  //!$ PythonEnd -------------------------------------------------------------------------------------------------------
+
+
+  //! IndentRainbow ----------------------------------------------------------------------------------------------------
+
+  "indentRainbow.indicatorStyle": "light", // Using the light mode   (other options: classic)
+  "indentRainbow.colorOnWhiteSpaceOnly": false,  // If error color is disabled, indent colors will be rendered until the length of rendered characters (white spaces, tabs, and other ones) is divisible by tabsize. Turn on this option to render white spaces and tabs only
+  "indentRainbow.errorColor": "rgba(128,32,32,0.6)", // 	Indent color for when there is an error in the indentation, for example if you have your tabs set to 2 spaces but the indent is 3 spaces. Can be any type of web based color format (hex, rgba, rgb
+  "indentRainbow.excludedLanguages": [
+    "plaintext"
+  ],  // An array of language identifiers for which the extension should be disabled.
+  "indentRainbow.ignoreErrorLanguages": [
+    "markdown"
+  ],  // For which languages indent-rainbow should skip indent error detection (use '*' to deactivate errors for all languages)
+  "indentRainbow.lightIndicatorStyleLineWidth": 2,  // we use a simple 1 pixel wide line
+  "indentRainbow.ignoreLinePatterns": [
+    "/[ \t]* [*]/g",
+    "/[ \t]+[/]{2}/g"
+  ],   // Skip error highlighting for RegEx patterns. Defaults to c/cpp decorated block and full line comments
+  "indentRainbow.includedLanguages": [
+  ],  // For which languages indent-rainbow should be activated. When empty will use for all languages.
+  "indentRainbow.indentSetter": {}, // 	Automatically change indent settings for languages (see README.md for details)
+  "indentRainbow.colors": [
+    "rgba(255,255,64,0.3)",
+    "rgba(127,255,127,0.3)",
+    "rgba(255,127,255,0.3)",
+    "rgba(79,236,236,0.3)"
+  ],   // An array with color (hex, rgba, rgb) strings which are used as colors, can be any length.
+  "indentRainbow.updateDelay": 100, // The delay in ms until the editor gets updated
+  "indentRainbow.tabmixColor": "rgba(128,32,96,0.6)", // Indent color for when there is a mix between spaces and tabs in the indentation. Can be any type of web based color format (hex, rgba, rgb) or a empty string(to be disabled this coloring)
+
+  //!$ INdentRainbowEnd ------------------------------------------------------------------------------------------------
+
+  //! cSpell -----------------------------------------------------------------------------------------------------------
+  "cSpell.language": "en,de",
+  "cSpell.words":[
+    "csterrn",
+    "NOTME",
+    "centipede"
+  ],   // words always considered correct
+  "cSpell.flagWords": [
+    "hte"
+  ], // words always considered wrong (e.g., hte --> the)
+  "cSpell.maxNumberOfProblems": 100,  // Controls the maximum number of spelling errors per document.
+  "cSpell.numSuggestions": 8, // Controls the number of suggestions shown.
+  "cSpell.minWordLength": 4,  // The minimum length of a word before checking it against a dictionary.
+  // "cSpell.enabledLanguageIds": [
+  //     "csharp",
+  //     "go",
+  //     "javascript",
+  //     "javascriptreact",
+  //     "markdown",
+  //     "php",
+  //     "plaintext",
+  //     "typescript",
+  //     "typescriptreact",
+  //     "yaml",
+  //     "sql"
+  // ],  // Specify file types to spell check.
+  "cSpell.enabled": true,  // Enable / Disable the spell checker.
+  "cSpell.allowCompoundWords": false, // Enable / Disable compound words like 'errormessage'
+  "cSpell.ignoreWords": ["behaviour"],    // Words to be ignored and not suggested.
+  "cSpell.userWords": [],   // User words to add to dictionary.  Should only be in the user settings.
+  "cSpell.ignorePaths": [
+      "node_modules",        // this will ignore anything the node_modules directory
+      "**/node_modules",     // the same for this one
+      "**/node_modules/**",  // the same for this one
+      "node_modules/**",     // Doesn't currently work due to how the current working directory is determined.
+      "vscode-extension",    //
+      ".git",                // Ignore the .git directory
+      "*.dll",               // Ignore all .dll files.
+      "**/*.dll"             // Ignore all .dll files
+  ],// Specify paths/files to ignore.
+  "cSpell.spellCheckDelayMs": 50, // Set the delay before spell checking the document. Default is 50.
+  // Set Diagnostic Reporting Level
+  //   Error - Report Spelling Issues as Errors
+  //   Warning - Report Spelling Issues as Warnings
+  //   Information - Report Spelling Issues as Information (default)
+  //   Hint - Report Spelling Issues as Hints, will not show up in Problems
+  "cSpell.diagnosticLevel": "Hint",
+  //!$ cSpellEnd -------------------------------------------------------------------------------------------------------
+
+
+  //! JavaDebugger -----------------------------------------------------------------------------------------------------
+  "java.debug.logLevel": "error", // options: error, info, warn, verbose , defaults to warn
+  "java.debug.settings.showHex": true, // show numbers in hex format in "variables" viewlet, default to false
+  "java.debug.settings.console": "externalTerminal",  // specififed console to launch java program, default is externalTerminal;; if customize modify console in launch.json: [internalConsole=VSCode debug console(inputstream not supported)][integratedTerminal=integratedtermiinal][externalTerminal=external terminal that can be configured in usersettings]
+  "java.debug.settings.debugSupportOnDecompiledSource": "off", // _ ** Needs Language Support for Java by RedHat ** ||  [Experimental]: Enable debugging support on the decompiled source code. Be aware that this feature may affect the loading speed of Call Stack Viewlet
+  "java.debug.settings.enableRunDebugCodeLens": true, // enable the code lens provider for the run and debug buttons over main enty points, default to true
+  "java.debug.settings.exceptionBreakpoint.allowClasses": [], // Specifies the allowed locations where the exception breakpoint can break on. Wildcard is supported, e.g. java.*, *.Foo
+  "java.debug.settings.exceptionBreakpoint.exceptionTypes": [],  // set of exception types you want to break on (e.g., java.lang.NullPointerException), A specific exception type and its subclasses can be selected for caught exceptions, uncaught exceptions, or both can be selected.
+  "java.debug.settings.exceptionBreakpoint.skipClasses": [], // Skip the specified classes when breaking on exception [$JDK = Skip the JDK classes from the default system bootstrap classpath, such as rt.jar, jrt-fs.jar][$Libraries = Skip the classes from application libraries, such as Maven, Gradle dependencies][java.* = Skip the specified classes. Wildcard is supported.][java.lang.ClassLoader = skip the class loaders]
+  "java.debug.settings.forceBuildBeforeLaunch": true,   // force building the workspace before launching the java programm, default to true
+  "java.debug.settings.jdwp.async": "auto", // Experimental: Controls whether the debugger is allowed to send JDWP commands asynchronously. Async mode can improve remote debugging response speed on high-latency networks. Defaults to auto, and automatically switch to async mode when the latency of a single jdwp request exceeds 15ms during attach debugging (values: auto, on, of)
+  "java.debug.settings.jdwp.limitOfVariablesPerJdwpRequest": 100, // maximum number of variables or fields that can be requested in one JDWP request. The higher the value, the less frequently debuggee will be requested when expanding the variable view. Also a large number can cause JDWP request timeout. Defaults to 100
+  "java.debug.settings.jdwp.requestTimeout": 3000,  // timeout (ms) of JDWP request when the debugger communicates with the target JVM. Defaults to 3000
+  "java.debug.settings.maxStringLength": 0, // maximum string length of strings displayed in "Variables" or "Debug Console" viewlet: string longer than that will be trimmed, default 0 means no trim performed
+  "java.debug.settings.numericPrecision": 0,  // precision when formatting doubles in "Variables" or "Debug COnsole"
+  "java.debug.settings.onBuildFailureProceed": false, // force to proceed when build fails, default to false
+  "java.debug.settings.showLogicalStructure": true, // show logical structure for the collection and map classes in "variables" viewlet, defaults to true
+  "java.debug.settings.showQualifiedNames": false,  // show fully qualified class names in "variables" viewlet, defaults to false
+  "java.debug.settings.showStaticVariables": false, // show static variables in "variables" viewlet, defaults to false
+  "java.debug.settings.showToString": true,  // show "toString()" value for all classes that override "toString" in "variables" viewlet, default to true
+  "java.debug.settings.stepping.skipClasses": [],  // Skip the specified classes when stepping (same values as in "java.debug.settings.exceptionBreakpoint.skipClasses")
+  "java.debug.settings.stepping.skipConstructors": false, // Skip constructor methods when stepping
+  "java.debug.settings.stepping.skipStaticInitializers": false, //skip static initializer methods when stepping
+  "java.debug.settings.stepping.skipSynthetics": false, // Skip synthetic methods when stepping.
+  "java.debug.settings.vmArgs": "", // default VM arguments to launch the Java program. Eg. Use '-Xmx1G -ea' to increase the heap size to 1GB and enable assertions. If you want to customize the VM arguments for a specific debug session, please modify the 'vmArgs' config in launch.json
+  "java.debug.settings.hotCodeReplace": "auto", // reload the changed java classes during debugging, default to manual :: [manual=click toolbar to apply changes][auto=atomatically apply the changes after compilation, only works when "java.autobuild.enabled" is on][never=never appply the changes]
+  //!$ JavaDebuggerEnd -------------------------------------------------------------------------------------------------
+
+
+  "java.silentNotification": false, // Controls whether notifications can be used to report progress. If true, use status bar to report progress instead. Defaults to false
+
+
+  //! JavaExtensionPack ------------------------------------------------------------------------------------------------
+  "java.help.collectErrorLog": false, // Whether to send back detailed information from error logs for diagnostic purpose, default to false
+  "java.help.firstView": "auto", // Sets the default view which is presented during the first use (values: auto, gettingStarted, welcome, overview, none)
+  "java.help.showReleaseNotes": true, // Show release notes of Extension Pack for Java on startup , default to true
+  
+
+
+  //! Docker -----------------------------------------------------------------------------------------------------------
+
+
+  //!$ DockerEnd -------------------------------------------------------------------------------------------------------
+
+
+  //====================================================================================================================
+  //- ************************************* GENERAL SETTINGS SECTION ***************************************************
+  //====================================================================================================================
+
+
+  //! editor -----------------------------------------------------------------------------------------------------------
+  "editor.fontSize": 14,
+  "editor.fontLigatures": true,
+  "editor.formatOnSave": true,
+  "editor.formatOnPaste": false,
+  "editor.renderWhitespace": "trailing",
+  "editor.tabSize": 4,
+  "editor.rulers": [80, 120],
+  "editor.suggestSelection": "first",
+  "diffEditor.ignoreTrimWhitespace": false,
+  "diffEditor.experimental.showMoves": true,
+  "diffEditor.hideUnchangedRegions.contextLineCount": 5,
+  "editor.stickyScroll.enabled": true,
+  "editor.minimap.enabled": true,
+  "editor.minimap.showSlider": "always",
+  "editor.fontFamily": "JetBrains Mono",      // Needed?
+  //!$ editorEnd -------------------------------------------------------------------------------------------------------
+
+
+  //! workbench --------------------------------------------------------------------------------------------------------
+  "workbench.colorTheme": "Default Dark Modern",
+  "workbench.iconTheme": "material-icon-theme",
+  "workbench.activityBar.location": "default",
+  "workbench.tree.stickyScrollMaxItemCount": 5,
+  "workbench.colorCustomizations": {
+    "[Default Dark Modern]": {
+      "tab.activeBorderTop": "#00FF00",
+      "tab.unfocusedActiveBorderTop": "#00FF0088",
+      "textCodeBlock.background": "#00000055"
+    },
+    "editor.wordHighlightStrongBorder": "#FF6347",
+    "editor.wordHighlightBorder": "#FFD700",
+    "editor.selectionHighlightBorder": "#A9A9A9"
+  },
+  "workbench.editor.revealIfOpen": true,
+  "workbench.tree.indent": 20,
+  //!$ workbenchEnd ----------------------------------------------------------------------------------------------------
+
+  //! terminal ---------------------------------------------------------------------------------------------------------
+  "terminal.integrated.inheritEnv": false,
+  "terminal.integrated.defaultProfile.windows": "JavaSE-21 LTS",
+  //!$ terminalEnd -----------------------------------------------------------------------------------------------------
+
+  //! Debug ------------------------------------------------------------------------------------------------------------
+  "debug.onTaskErrors": "debugAnyway",
+  //!$ DebugEnd --------------------------------------------------------------------------------------------------------
+
+  //! Explorer ---------------------------------------------------------------------------------------------------------
+  "explorer.confirmDelete": false,
+  "explorer.confirmDragAndDrop": false,
+  //!$ ExplorerEnd -----------------------------------------------------------------------------------------------------
+
+  //! Window -----------------------------------------------------------------------------------------------------------
+  "window.zoomLevel": 0,
+  //!$ WindowEnd -------------------------------------------------------------------------------------------------------
+
+  //! file -------------------------------------------------------------------------------------------------------------
+  "files.autoSave": "onFocusChange",
+  //!$ fileEnd ---------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  "C_Cpp.intelliSenseEngine": "disabled",
+  "clangd.path": "c:\\Users\\lukas\\AppData\\Roaming\\Code\\User\\globalStorage\\llvm-vs-code-extensions.vscode-clangd\\install\\17.0.3\\clangd_17.0.3\\bin\\clangd.exe",
+  "cmake.options.statusBarVisibility": "visible",
+  
+  "cmake.configureOnOpen": true,
+
+
+
+
+
+
+  //region ServerSettings
+  "python.languageServer": "Pylance",
+  "notebook.stickyScroll.enabled": true,
+  "editor.stickyScroll.defaultModel": "foldingProviderModel",
+  "editor.stickyScroll.maxLineCount": 8,
+  "terminal.integrated.stickyScroll.enabled": true,
+  "arduino.useArduinoCli": true,
+  "editor.codeActionsOnSave": {
+    "source.organizeImports": "explicit"
+  },
+  "editor.linkedEditing": true,
+
+  "editor.unicodeHighlight.includeComments": true,
+  
+  "files.eol": "\n",
+  "[bat]": {
+    "files.eol": "\r\n"
+  },
+  "emmet.variables": {
+    "lang": "de"
+  },
+  
+  "trailing-spaces.backgroundColor": "rgba(255,0,0,0.1)",
+  "trailing-spaces.includeEmptyLines": false,
+  "terminal.integrated.tabs.hideCondition": "never",
+  "terminal.integrated.enablePersistentSessions": false,
+  "java.configuration.detectJdksAtStart": false,
+  "java.configuration.updateBuildConfiguration": "automatic",
+  
+  "java.dependency.packagePresentation": "hierarchical",
+  "java.sources.organizeImports.staticStarThreshold": 1,
+  "java.configuration.runtimes": [
+    {
+      "name": "JavaSE-1.8",
+      "path": "C:\\Users\\lukas\\AppData\\Roaming\\Code\\User\\globalStorage\\pleiades.java-extension-pack-jdk\\java\\8"
+    },
+    {
+      "name": "JavaSE-11",
+      "path": "C:\\Users\\lukas\\AppData\\Roaming\\Code\\User\\globalStorage\\pleiades.java-extension-pack-jdk\\java\\11"
+    },
+    {
+      "name": "JavaSE-17",
+      "path": "C:\\Users\\lukas\\AppData\\Roaming\\Code\\User\\globalStorage\\pleiades.java-extension-pack-jdk\\java\\17"
+    },
+    {
+      "name": "JavaSE-21",
+      "path": "C:\\Program Files\\Java\\jdk-21"
+    },
+    {
+      "name": "JavaSE-23",
+      "path": "C:\\Users\\lukas\\AppData\\Roaming\\Code\\User\\globalStorage\\pleiades.java-extension-pack-jdk\\java\\latest",
+      "default": true
+    }
+  ],
+  "terminal.integrated.profiles.windows": {
+    "JavaSE-1.8 LTS": {
+      "overrideName": true,
+      "env": {
+        "PATH": "C:\\Users\\lukas\\AppData\\Roaming\\Code\\User\\globalStorage\\pleiades.java-extension-pack-jdk\\java\\8\\bin;${env:PATH}",
+        "JAVA_HOME": "C:\\Users\\lukas\\AppData\\Roaming\\Code\\User\\globalStorage\\pleiades.java-extension-pack-jdk\\java\\8"
+      },
+      "path": "cmd"
+    },
+    "JavaSE-11 LTS": {
+      "overrideName": true,
+      "env": {
+        "PATH": "C:\\Users\\lukas\\AppData\\Roaming\\Code\\User\\globalStorage\\pleiades.java-extension-pack-jdk\\java\\11\\bin;${env:PATH}",
+        "JAVA_HOME": "C:\\Users\\lukas\\AppData\\Roaming\\Code\\User\\globalStorage\\pleiades.java-extension-pack-jdk\\java\\11"
+      },
+      "path": "cmd"
+    },
+    "JavaSE-17 LTS": {
+      "overrideName": true,
+      "env": {
+        "PATH": "C:\\Users\\lukas\\AppData\\Roaming\\Code\\User\\globalStorage\\pleiades.java-extension-pack-jdk\\java\\17\\bin;${env:PATH}",
+        "JAVA_HOME": "C:\\Users\\lukas\\AppData\\Roaming\\Code\\User\\globalStorage\\pleiades.java-extension-pack-jdk\\java\\17"
+      },
+      "path": "cmd"
+    },
+    "JavaSE-21 LTS": {
+      "overrideName": true,
+      "env": {
+        "PATH": "C:\\Program Files\\Java\\jdk-21\\bin;${env:PATH}",
+        "JAVA_TOOL_OPTIONS": "-Dstdout.encoding=UTF-8 -Dstderr.encoding=UTF-8",
+        "JAVA_HOME": "C:\\Program Files\\Java\\jdk-21"
+      },
+      "path": "cmd",
+      "args": ["/k", "chcp", "65001"]
+    },
+    "JavaSE-23": {
+      "overrideName": true,
+      "env": {
+        "PATH": "C:\\Users\\lukas\\AppData\\Roaming\\Code\\User\\globalStorage\\pleiades.java-extension-pack-jdk\\java\\latest\\bin;${env:PATH}",
+        "JAVA_TOOL_OPTIONS": "-Dstdout.encoding=UTF-8 -Dstderr.encoding=UTF-8",
+        "JAVA_HOME": "C:\\Users\\lukas\\AppData\\Roaming\\Code\\User\\globalStorage\\pleiades.java-extension-pack-jdk\\java\\latest"
+      },
+      "path": "cmd",
+      "args": ["/k", "chcp", "65001"]
+    }
+  },
+  "terminal.integrated.automationProfile.windows": {
+    "path": "cmd"
+  },
+  "java.test.config": {
+    "vmArgs": ["-Dstdout.encoding=UTF-8", "-Dstderr.encoding=UTF-8"]
+  },
+  "terminal.integrated.env.windows": {
+    "JAVA_HOME": "C:\\Program Files\\Java\\jdk-21",
+    "PATH": "C:\\Program Files\\Java\\jdk-21\\bin;${env:PATH}"
+  },
+  "maven.terminal.customEnv": [
+    {
+      "environmentVariable": "JAVA_HOME",
+      "value": "C:\\Program Files\\Java\\jdk-21"
+    }
+  ],
+  "java.import.gradle.java.home": "C:\\Program Files\\Java\\jdk-21",
+  "plantuml.java": "C:\\Program Files\\Java\\jdk-21\\bin\\java.exe",
+  "maven.executable.path": "C:\\Users\\lukas\\AppData\\Roaming\\Code\\User\\globalStorage\\pleiades.java-extension-pack-jdk\\maven\\latest\\bin\\mvn",
+  "java.import.gradle.home": "C:\\Users\\lukas\\AppData\\Roaming\\Code\\User\\globalStorage\\pleiades.java-extension-pack-jdk\\gradle\\latest",
+  "git.openRepositoryInParentFolders": "never",
+  "java.compile.nullAnalysis.mode": "automatic",
+  "java.maxConcurrentBuilds": 8,
+
+  "todo-tree.highlights.defaultHighlight": {
+    "icon": "alert",
+    "type": "text",
+    "foreground": "red",
+    "background": "white",
+    "opacity": 50,
+    "iconColour": "blue"
+  },
+  "todo-tree.highlights.customHighlight": {
+    "todo": {
+      "icon": "check",
+      "type": "line"
+    },
+    "FIXME": {
+      "foreground": "black",
+      "iconColour": "yellow",
+      "gutterIcon": true
+    }
+  },
+  //endregion
+
+
+
+
+  
 }

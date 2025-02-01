@@ -1,0 +1,29 @@
+// If a certain project has special words beside the words mentioned
+// in the general settings.json file, they can be added here
+
+//! ALL settings used in the general settings.json file can be adjusted here
+
+// cSpell Settings
+{
+
+    "enabled": true,
+    // Version of the setting file.  Always 0.2
+    "version": "0.2",
+    // language - current active spelling language
+    "language": "en",
+    // words - list of words to be always considered correct
+    "words": [
+        "mkdirp",
+        "tsmerge",
+        "deinemum",
+        "streetsidesoftware",
+        "vsmarketplacebadge",
+        "visualstudio"
+    ],
+    // flagWords - list of words to be always considered incorrect
+    // This is useful for offensive words and common spelling errors.
+    // For example "hte" should be "the"
+    "flagWords": [
+        "hello"
+    ]
+}

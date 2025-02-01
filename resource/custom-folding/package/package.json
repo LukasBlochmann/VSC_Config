@@ -1,0 +1,18 @@
+{
+    "name": "custom-folding",
+    "displayName": "Custom Folding",
+    "description": "Adds custom folding regions with #FOLD and #ENDFOLD",
+    "version": "1.0.0",
+    "publisher": "your-name",
+    "engines": { "vscode": "^1.70.0" },
+    "categories": ["Other"],
+    "activationEvents": ["onLanguage:*"],
+    "main": "./out/extension.js",
+    "contributes": {
+        "languages": [{ "id": "*", "extensions": ["*"] }]
+    },
+    "devDependencies": {
+        "typescript": "^4.8.3",
+        "vscode": "^1.70.0"
+    }
+}
